@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Untitled-2" x="0px" y="0px" width="22px" height="22px" viewBox="0 0 22 22" enable-background="new 0 0 22 22" xml:space="preserve">
+<path fill="none" d="z"/>
+<g xmlns="http://www.w3.org/2000/svg" id="Layer_x25_201" style="fill: #fff">
+  	<rect xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" style="
+    stroke-width: 2px;
+    stroke: #fff;
+    x: 1;
+    y: 1;
+    width: 20px;
+    height: 16px;
+    stroke-linejoin: round;
+"/>
+	<rect width="18" height="2" x="2" y="5" style="
+    x: 4;
+    y: 4;
+    width: 14px;
+"/>
+	<rect y="10" width="18" height="2" x="2" style="
+    x: 4;
+    y: 8;
+    width: 14px;
+"/>
+	<rect y="15" width="18" height="2" x="2" style="
+    width: 14px;
+    x: 4;
+    y: 12;
+"/>
+</g>
+<path fill="none" d="z"/>
+</svg>

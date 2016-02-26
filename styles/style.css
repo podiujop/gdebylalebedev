@@ -6,21 +6,22 @@
 	-webkit-box-sizing:border-box;
 }
 
-html, body, .wrapper {
+html, body {
 	width: 100%;
 	height: 100%;
 	padding: 0;
 	margin: 0;
+	overflow: hidden;
 	font-size: 100%;
 	font-family: 'PT Sans' , sans-serif;
 }
 
-html, body {
-	min-width: 961px;
+img {
+	width: 100%;
 }
 
 .clearfix:after {
-	content: ".";
+	content: "";
 	display: block;
 	height: 0;
 	clear: both;
@@ -28,66 +29,73 @@ html, body {
 
 }
 
-.relative {
-	position: relative;
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
-img {
+
+/*Main content*/
+
+.wrapper {
 	width: 100%;
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
-.header {
-	width: 100%;
-	height: 12%;
-	line-height: 100%;
+#header {
 	background: #2D728F;
+	display: block;
+	    text-align: center;
+	    padding: 0 6%
 }
 
-.header__wrapper {
-	width: 83%;
-	margin: 0 auto;
-	height: 100%;
-	padding-top: 0.6em;
-}
-
-.header__logo {
-	width: 25%;
-	float: left;
+.header__home {
 	display: inline-block;
-	height: 100%;
+	width: 20%;
+	vertical-align: middle;
+	/*float: left;*/
 }
 
-.header__logo_img {
+nav {
+	width: 75%;
+	/*float: right;*/
 	display: inline-block;
-	width: 100%;
+	vertical-align: middle;
+	padding: 0;
+	margin: 0;
 }
 
 .header__menu {
-	width: 75%;
-	height: 100%;
-	float: right;
-	line-height: 100%;
-	line-height: 100%;
-}
-
-.header__menu ul {
-	margin: 0;
-	float: right;
-	height: 100%;
+	list-style-type: none;
+	padding: 0;
+    margin: 0;
+    float: right;
 }
 
 .header__menu_list-item {
-	display: block;
 	padding: 0 3px;
 	float: left;
 	color: #fff;
 	text-shadow: 1px 1px 0px #333;
 }
 
+.header__menu_list-item {
+	display: inline;
+}
+
+.header__menu_list-item:after {
+	 content: "|"; 
+}
+
+.header__menu_link:hover {
+	color: rgb(255, 163, 163);
+}
+
 .header__menu_link {
 	display: inline-block;
-	margin-top: -3px;
-	list-style-type: none;
 	font-size: 0.85em;
 	color: #fff;
 	text-decoration: none;
@@ -95,10 +103,6 @@ img {
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
-}
-
-.header__menu_list-item:after {
-	 content: "|"; 
 }
 
 .header__menu_link:hover {
@@ -110,7 +114,6 @@ img {
 	background: #9A1808;
 	border-color: #9A1808;
 }
-
 .header__disclaimer {
 	margin-right: 0;
 }
@@ -126,16 +129,15 @@ img {
 	background: rgb(236, 130, 119);
 }
 
-.header__description {
-	width: 100%;
-	-webkit-transition: 0.3s;
-	-o-transition: 0.3s;
-	transition: 0.3s;
+.menu-collapse {
+	display: none;
 }
 
-.description {
+/*Description block*/
+
+#description {
 	width: 100%;
-	height: 3%;
+	display: block;
 	text-align: center;
 	background: #3B8EA5;
 	color: rgba(255,230,129,1);
@@ -150,103 +152,37 @@ img {
 	font-weight: normal;
 }
 
+/*Map block*/
+
 #map {
 	width: 100%;
-	height: 85%;
+	display: block;
 	background: url(../img/map-bg.png);
 }
 
-.about__main,
-.disclaimer__main {
-	width: 100%;
-	height: 87%;
-}
+/*Media*/
 
-.about__main_wrapper,
-.disclaimer__main_wrapper {
-	width: 80%;
-	margin: 0 auto;
-	height: 100%;
-}
-
-.header__disclaimer_link_active {
-	color: #fff;
-	background: #9A1808;
-	border-color: #9A1808;
-}
-
-@media (min-width: 1100px) {
-	.header__menu ul {
-		padding-top: 1.3em;
-	}
-}
-
-@media (max-width: 1099px) {
-	.header__menu ul {
-		padding-top: 0.3em;
-	}
-}
-
-@media (max-width: 960px) {
-
-	html, body {
-		min-width: 100%;
-	}
-
-	.header,
-	.description,
-	#map {
-		 height: auto; 
-		display: block;
-		width: 100%;
-	}
-	
-	#map {
-		min-height: 600px;
-	}
-
-	.description {
-		/*padding: 0.3em 0;*/
-	}
-
-	.header__wrapper {
-		width: 100%;
-	}
-	.header__logo,
-	.header__menu {
-		float: none;
-		display: block;
-		text-align: center;
-		width: 100%;
-	}
-
-	.header__logo_link {
-		display: block;
-		width: 100%;
-	
-	}
-
-	.header__logo_img {
-		width: auto;
-	}
-
-	.header__menu ul {
-		width: 100%;
-		margin: 0;
-		float: none;
-		height: 100%;
+@media (max-width: 768px) {
+	#header {
 		padding: 0;
 	}
 
-	.header__menu_list-item {
-		float: none;
-		padding: 3px 0;
+
+	.header__home {
+		width: 60%;
+		margin-right: 5em;
+	}
+	.menu-collapse {
+		display: inline-block;
+		padding: 6%;
+		margin-bottom: -7px;
+		background: url(../img/menu-collapse.svg);
+		background-size: cover;
+		vertical-align: middle;
+
 	}
 
-
-	.header__menu_list-item:after {
-		content: "";
+	nav {
+		display: none;
 	}
-	
-
 }
