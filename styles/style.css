@@ -109,11 +109,19 @@ nav {
 	color: rgb(255, 163, 163);
 }
 
+.header__disclaimer_link {
+	padding: 3px;
+	border: 1px solid rgb(236, 130, 119);
+	border-radius: 3px;
+	background: rgb(236, 130, 119);
+}
+
 .header__disclaimer_link:hover {
 	color: #fff;
 	background: #9A1808;
 	border-color: #9A1808;
 }
+
 .header__disclaimer {
 	margin-right: 0;
 }
@@ -122,12 +130,7 @@ nav {
 	content: " " !important;
 }
 
-.header__disclaimer_link {
-	padding: 1px;
-	border: 1px solid rgb(236, 130, 119);
-	border-radius: 3px;
-	background: rgb(236, 130, 119);
-}
+
 
 .menu-collapse {
 	display: none;
