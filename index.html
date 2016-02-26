@@ -49,32 +49,39 @@
 		<script>
 
 			$(document).ready(function () {
-				x = $( window ).width();
-				z = $( window ).height();
-				$("#header").css("height", z * 0.15);
-				$("#map").css("height", z * 0.85);
+				xRes = $( window ).width();
+				zRes = $( window ).height();
+				$("#header").css("height", zRes * 0.15);
+				$("#map").css("height", zRes * 0.85);
 
 				$("#menu").click(function(event){
 					event.preventDefault();
-					$("nav").slideToggle().css("top" , z * 0.15);
+					$("nav").slideToggle().css("top" , zRes * 0.15);
 				});
 
 			});
 
 			$(window).resize(function(){
-					var xRes = $( window ).width();
-					var zRes = $( window ).height();
+					
+					xRes = $( window).width();
+					zRes = $( window).height();
+					// var xRes = $( window ).width();
+					// var zRes = $( window ).height();
 
 					var mapSize = zRes * 0.85;
-					if (xRes > 768) {
+
+					if (xRes > 901) {
+						console.log(xRes);
 						$("nav").css("display", "inline-block");
+					} else {
+						$("nav").css("display", "none");
 					};
 
-					console.log(x, z);
 					console.log('resize');
 
 					$("#map").css("height", mapSize);
 					$("#header").css("height", zRes - mapSize);
+
 			});
 		</script>
 		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
