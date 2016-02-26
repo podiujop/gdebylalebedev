@@ -160,6 +160,28 @@ nav {
 	background: url(../img/map-bg.png);
 }
 
+/*Other pages*/
+
+.about__main,
+.disclaimer__main {
+	width: 100%;
+	height: 87%;
+}
+
+.about__main_wrapper,
+.disclaimer__main_wrapper {
+	width: 80%;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.header__disclaimer_link_active {
+	color: #fff;
+	background: #9A1808;
+	border-color: #9A1808;
+}
+
+
 /*Media*/
 
 @media (max-width: 768px) {
