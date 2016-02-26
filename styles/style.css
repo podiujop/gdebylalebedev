@@ -116,6 +116,14 @@ nav {
 	background: rgb(236, 130, 119);
 }
 
+.header__disclaimer_link_active {
+	color: #fff;
+	border-radius: 3px;
+	padding: 3px;
+	background: #9A1808;
+	border-color: #9A1808;
+}
+
 .header__disclaimer_link:hover {
 	color: #fff;
 	background: #9A1808;
@@ -168,14 +176,16 @@ nav {
 .about__main,
 .disclaimer__main {
 	width: 100%;
-	height: 87%;
 }
 
 .about__main_wrapper,
 .disclaimer__main_wrapper {
 	width: 80%;
 	margin: 0 auto;
-	height: 100%;
+}
+
+.header__menu_link-about_active {
+	border-bottom: 3px solid #fff;
 }
 
 .header__disclaimer_link_active {
