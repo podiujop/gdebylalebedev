@@ -184,7 +184,7 @@ nav {
 
 /*Media*/
 
-@media (max-width: 900px) {
+@media (max-width: 730px) {
 	#header {
 		padding: 0;
 	}
