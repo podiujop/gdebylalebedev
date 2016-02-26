@@ -215,7 +215,7 @@ nav {
 		left: 0px;
 		z-index: 99999;
 		width: 100%;
-		background: rgba(0, 0, 0, 0.53);
+		background: rgba(0, 0, 0, 0.85);
 	}
 
 	.header__menu {
@@ -226,8 +226,8 @@ nav {
 		display: block;
 		float: none;
 		padding: 0.9em 0;
-		border-top: 1px solid #fff;
-		border-bottom: 1px solid #333;
+		border-top: 2px solid #716D6D;
+		border-bottom: 2px solid #000;
 	}
 
 	.header__menu_list-item:after {
