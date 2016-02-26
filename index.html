@@ -16,7 +16,8 @@
 				<a href="http://artemylebedev.tk" title="Артемий Лебедев путешествия" class="header__home">
 					<img src="img/logo.png" alt="">
 				</a>
-				<nav class="clearfix">
+				<a id="menu" class="menu-collapse" href="#"></a>
+				<nav class="clearfix menu-toggle">
 					<ul class="header__menu">
 						<li class="header__menu_list-item">
 							<a class="header__menu_link" target="_blank" title="Студия Артемия Лебедева" href="http://artlebedev.ru">Студия Артемия</a>
@@ -40,7 +41,7 @@
 						</li>
 					</ul>
 				</nav>
-				<a id="menu" class="menu-collapse" href="#"></a>
+				
 			</div>
 			<div id="map"></div>
 		</div>
@@ -55,12 +56,9 @@
 
 				$("#menu").click(function(event){
 					event.preventDefault();
-					$("nav").css("display", "inline-block");
+					$("nav").slideToggle().css("top" , z * 0.15);
 				});
 
-				if(window.innerHeight > window.innerWidth){
-					alert("Please use Landscape!");
-				}
 			});
 
 			$(window).resize(function(){
@@ -68,6 +66,9 @@
 					var zRes = $( window ).height();
 
 					var mapSize = zRes * 0.85;
+					if (xRes > 768) {
+						$("nav").css("display", "inline-block");
+					};
 
 					console.log(x, z);
 					console.log('resize');

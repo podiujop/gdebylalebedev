@@ -189,11 +189,11 @@ nav {
 		padding: 0;
 	}
 
-
 	.header__home {
 		width: 60%;
 		margin-right: 5em;
 	}
+
 	.menu-collapse {
 		display: inline-block;
 		padding: 6%;
@@ -206,5 +206,31 @@ nav {
 
 	nav {
 		display: none;
+	}
+
+	.menu-toggle {
+		position: absolute;
+		top: 0px;
+		bottom: 0;
+		left: 0px;
+		z-index: 99999;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.53);
+	}
+
+	.header__menu {
+		float: none;
+	}
+
+	.header__menu_list-item {
+		display: block;
+		float: none;
+		padding: 0.9em 0;
+		border-top: 1px solid #fff;
+		border-bottom: 1px solid #333;
+	}
+
+	.header__menu_list-item:after {
+		content:"";
 	}
 }
