@@ -109,7 +109,7 @@ nav {
 }
 
 .header__disclaimer_link {
-    padding: 3px;
+    padding: 0px 3px;
     border: 1px solid #ec8277;
     border-radius: 3px;
     background: #ec8277
@@ -117,7 +117,7 @@ nav {
 
 .header__disclaimer_link_active {
     border-radius: 3px;
-    padding: 3px
+    padding: 0px 3px;
 }
 
 .header__disclaimer_link:hover {
